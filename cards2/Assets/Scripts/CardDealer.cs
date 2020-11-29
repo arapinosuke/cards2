@@ -6,8 +6,7 @@ public class CardDealer : MonoBehaviour
     private List<Card> deck = new List<Card>();
     private List<Card> playerHand = new List<Card>();
 
-
-    private void Start()
+    void Start()
     {
         deck = Deck.ShuffleDeck(Deck.GetDeck());
     }
@@ -39,7 +38,6 @@ public class CardDealer : MonoBehaviour
         {
             Debug.Log($"{card.CardSuit}:{card.Number}");
         }
-        Debug.Log(PokerHand.CardHand(playerHand));
     }
 
     public void CardChange(List<Card> playerHand, int changeNum)
