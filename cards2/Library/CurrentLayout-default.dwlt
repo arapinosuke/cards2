@@ -96,7 +96,7 @@ MonoBehaviour:
   m_MinSize: {x: 911, y: 442}
   m_MaxSize: {x: 22006, y: 10021}
   vertical: 0
-  controlID: 103
+  controlID: 60
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 47
+  controlID: 84
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -266,8 +266,8 @@ MonoBehaviour:
     y: 529
     width: 423
     height: 418
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -302,9 +302,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: aabdffff
-      m_LastClickedID: -16982
-      m_ExpandedIDs: 08fbffff1efbffffd6380000
+      m_SelectedIDs: e6350000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 5efbffffdc380000f638000020390000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -404,7 +404,8 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/Scripts
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -416,7 +417,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 1a4a0000
     m_LastClickedID: 18970
-    m_ExpandedIDs: 00000000e6390000e8390000ea390000ec390000
+    m_ExpandedIDs: 00000000ec390000ee390000f0390000f2390000f4390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -444,18 +445,18 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff0000000018390000e6390000e8390000ea390000ec390000
+    m_ExpandedIDs: ffffffff00000000ec390000ee390000f0390000f2390000f4390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: GameJudge
-      m_OriginalName: GameJudge
+      m_Name: HighAndLowSequence
+      m_OriginalName: HighAndLowSequence
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 17314
+      m_UserData: 13798
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -628,9 +629,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1012.2241, y: 191.39624, z: -141.75}
+    m_Target: {x: 967.1765, y: 514.44403, z: -268.32922}
     speed: 2
-    m_Value: {x: 1012.2241, y: 191.39624, z: -141.75}
+    m_Value: {x: 967.1765, y: 514.44403, z: -268.32922}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -680,9 +681,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 600.9893
+    m_Target: 1088.4567
     speed: 2
-    m_Value: 600.9893
+    m_Value: 1088.4567
   m_Ortho:
     m_Target: 1
     speed: 2
