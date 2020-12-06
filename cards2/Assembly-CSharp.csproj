@@ -62,12 +62,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\CPUHand.cs" />
+    <Compile Include="Assets\Scripts\CPUCard.cs" />
     <Compile Include="Assets\Scripts\Card.cs" />
-    <Compile Include="Assets\Scripts\CardDealer.cs" />
+    <Compile Include="Assets\Scripts\CardHelper.cs" />
+    <Compile Include="Assets\Scripts\CardImageHelper.cs" />
+    <Compile Include="Assets\Scripts\Dealer.cs" />
     <Compile Include="Assets\Scripts\Deck.cs" />
-    <Compile Include="Assets\Scripts\Facilitator.cs" />
-    <Compile Include="Assets\Scripts\PlayerHand.cs" />
+    <Compile Include="Assets\Scripts\GameJudge.cs" />
+    <Compile Include="Assets\Scripts\HighAndLowSequence.cs" />
+    <Compile Include="Assets\Scripts\PlayerCard.cs" />
+    <Compile Include="Assets\Scripts\PlayerJudge.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
