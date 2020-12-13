@@ -69,9 +69,13 @@
     <Compile Include="Assets\Scripts\Dealer.cs" />
     <Compile Include="Assets\Scripts\Deck.cs" />
     <Compile Include="Assets\Scripts\GameJudge.cs" />
+    <Compile Include="Assets\Scripts\GameMainPresenter.cs" />
     <Compile Include="Assets\Scripts\HighAndLowSequence.cs" />
     <Compile Include="Assets\Scripts\PlayerCard.cs" />
     <Compile Include="Assets\Scripts\PlayerJudge.cs" />
+    <Compile Include="Assets\Scripts\ResultPresenter.cs" />
+    <Compile Include="Assets\Scripts\ScoreViewer.cs" />
+    <Compile Include="Assets\Scripts\TitlePresenter.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

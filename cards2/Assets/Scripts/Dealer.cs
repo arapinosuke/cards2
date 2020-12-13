@@ -28,4 +28,9 @@ public class Dealer : MonoBehaviour
         GameDeck = Deck.GetDeck();
         GameDeck = Deck.ShuffleDeck(GameDeck);
     }
+
+    public bool GameEnd(List<Card> playerDeck)
+    {
+        return playerDeck.Count == 0;
+    }
 }

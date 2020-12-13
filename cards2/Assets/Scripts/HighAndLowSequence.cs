@@ -1,17 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HighAndLowSequence : MonoBehaviour
 {
-   private enum GameSequece
+    private enum GameSequece
     {
         Invalide,
         Init,
         Start,
         Deal,
         PlayerJudge,
-        show
+        show,
+        Result
     }
 
     private GameSequece gameSequece = GameSequece.Invalide;
@@ -24,10 +26,13 @@ public class HighAndLowSequence : MonoBehaviour
 
     public PlayerJudge playerJudge;
 
-    public bool GameOver = false;
-   
+    public GameJudge gameJudge;
 
-     void Update()
+    public ScoreViewer scoreViewer;
+
+    public float waitTime = 1f;
+
+    void Update()
     {
         switch (gameSequece)
         {
@@ -44,6 +49,8 @@ public class HighAndLowSequence : MonoBehaviour
                 break;
 
             case GameSequece.Start:
+
+                gameJudge.GameJudgetextInit();
 
                 gameSequece = GameSequece.Deal;
                 break;
@@ -69,32 +76,53 @@ public class HighAndLowSequence : MonoBehaviour
 
                 cpuCard.ShowCPUCard();
 
+                bool isWin = false;
+
                 if (playerJudge.High)
                 {
-                    if (playerCard.playerCard.Number>cpuCard.cpuCard.Number)
+                    if (playerCard.playerCard.Number > cpuCard.cpuCard.Number)
                     {
-                        Debug.Log("勝ち");
-                    }
-                    else
-                    {
-                        Debug.Log("負け");
+                        isWin = true;
                     }
                 }
                 else
                 {
                     if (playerCard.playerCard.Number < cpuCard.cpuCard.Number)
                     {
-                        GameOver = false;
-                        Debug.Log("勝ち");
+                        isWin = true;
+                    }
+                }
+
+                gameJudge.GameJudgeTextView(isWin);
+                waitTime -= Time.deltaTime;
+                if (waitTime < 0f)
+                {
+                    playerJudge.Judge = false;
+                    if(dealer.GameEnd(playerCard.GetPlayerDeck()))
+                    {
+                        gameSequece = GameSequece.Result;
                     }
                     else
                     {
-                        Debug.Log("負け");
+                        gameSequece = GameSequece.Start;
                     }
+                    gameSequece = GameSequece.Start;
+                    scoreViewer.AddscoreViewer(isWin);
+                    waitTime = 1f;
                 }
-                playerJudge.Judge = false;
-                gameSequece = GameSequece.Start;
+                break;
+
+            case GameSequece.Result:
+              
+                bool isResultWin = false;
+
+                if (scoreViewer.playerScore>scoreViewer.cpuScore)
+                {
+                    isResultWin = true;
+                }
+                gameJudge.GameResultTextView(isResultWin);
                 break;
         }
     }
 }
+   

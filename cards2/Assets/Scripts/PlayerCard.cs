@@ -20,6 +20,11 @@ public class PlayerCard : MonoBehaviour
         playerDeck = Dealer.GetPlayerDeck();
     }
 
+    public List<Card> GetPlayerDeck()
+    {
+        return playerDeck;
+    }
+
     public void SetPlayerCard()
     {
         playerCard=Deck.GetCard(playerDeck);
