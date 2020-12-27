@@ -30,6 +30,9 @@ public class HighAndLowSequence : MonoBehaviour
 
     public ScoreViewer scoreViewer;
 
+
+    public GameMainPresenter gameMain;
+
     public float waitTime = 1f;
 
     void Update()
@@ -98,7 +101,8 @@ public class HighAndLowSequence : MonoBehaviour
                 if (waitTime < 0f)
                 {
                     playerJudge.Judge = false;
-                    if(dealer.GameEnd(playerCard.GetPlayerDeck()))
+                    scoreViewer.AddscoreViewer(isWin);
+                    if (dealer.GameEnd(playerCard.GetPlayerDeck()))
                     {
                         gameSequece = GameSequece.Result;
                     }
@@ -106,8 +110,8 @@ public class HighAndLowSequence : MonoBehaviour
                     {
                         gameSequece = GameSequece.Start;
                     }
-                    gameSequece = GameSequece.Start;
-                    scoreViewer.AddscoreViewer(isWin);
+                    
+                    
                     waitTime = 1f;
                 }
                 break;
@@ -121,8 +125,11 @@ public class HighAndLowSequence : MonoBehaviour
                     isResultWin = true;
                 }
                 gameJudge.GameResultTextView(isResultWin);
-                break;
+                gameMain.GoToResult();
+                break;                
         }
     }
+    
+    
 }
    
